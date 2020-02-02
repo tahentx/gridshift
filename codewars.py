@@ -13,17 +13,18 @@
 # increment_string("Juice55")
 import random
 player = input("Rock,paper or scissors: ")
-def rock_paper(player, options = ['Rock','Paper','Scissors']):
+def rock_paper(player, options = ['Rock','Paper','Scissors'], tally = {}):
     assert player in options
     comp = random.choice(options)
-    tally = {}
     if player == 'Rock' and comp == 'Scissors':
         print("You win!")
         tally['Player'] = 1
+        tally['Computer'] = 0
     elif player == 'Rock' and comp == 'Rock':
         print("Draw!")
     elif player == 'Rock' and comp == 'Paper':
         print("Awww, computer wins!")
+        tally['Player'] = 0
         tally['Computer'] = 1
     print(tally)
 rock_paper("Rock")
