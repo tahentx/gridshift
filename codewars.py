@@ -38,4 +38,9 @@ def odd_or_even(arr):
        return "even" 
     else: 
         return "odd"
-odd_or_even([4,6,2,3])
+# odd_or_even([4,6,2,3])
+
+# kata: https://www.codewars.com/kata/515e271a311df0350d00000f/train/python
+def square_sum(numbers):
+    assert isinstance(numbers, list)
+    return sum(list(map(lambda x: x**2, numbers)))
