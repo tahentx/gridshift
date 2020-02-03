@@ -31,4 +31,11 @@ def sum_mix(arr: list) -> int:
     strs = [int(x) for x in arr if isinstance(x,str)]
     answer = integers + strs
     return sum(answer)
-sum_mix(["5",3,"9",3,9])
+
+def odd_or_even(arr):
+    assert isinstance(arr, list)
+    if sum(arr) % 2 == 0:
+       return "even" 
+    else: 
+        return "odd"
+odd_or_even([4,6,2,3])
