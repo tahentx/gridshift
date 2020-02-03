@@ -44,3 +44,11 @@ def odd_or_even(arr):
 def square_sum(numbers):
     assert isinstance(numbers, list)
     return sum(list(map(lambda x: x**2, numbers)))
+
+# kata: https://www.codewars.com/kata/5e0baea9d772160032022e8c/train/python
+
+def compute_ranks(number, games):
+    num_teams = range(number)
+    teams = list(map(lambda x: "Team" + str(x + 1), list(num_teams)))
+    print(teams)
+compute_ranks(5,5)
