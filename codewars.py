@@ -23,4 +23,12 @@ def people_with_age_drink(age):
         return "drink beer"
     elif age >= 21:
         return "drink whisky"
-people_with_age_drink(5)
+# people_with_age_drink(5)
+
+# kata: https://www.codewars.com/kata/57eaeb9578748ff92a000009/train/python
+def sum_mix(arr: list) -> int:
+    integers = list(filter(lambda x: isinstance(x,int), arr))
+    strs = [int(x) for x in arr if isinstance(x,str)]
+    answer = integers + strs
+    return sum(answer)
+sum_mix(["5",3,"9",3,9])
