@@ -11,20 +11,10 @@
 #         string_list[-1] = 1
 #         print(str(string_list))
 # increment_string("Juice55")
-import random
-player = input("Rock,paper or scissors: ")
-def rock_paper(player, options = ['Rock','Paper','Scissors'], tally = {}):
-    assert player in options
-    comp = random.choice(options)
-    if player == 'Rock' and comp == 'Scissors':
-        print("You win!")
-        tally['Player'] = 1
-        tally['Computer'] = 0
-    elif player == 'Rock' and comp == 'Rock':
-        print("Draw!")
-    elif player == 'Rock' and comp == 'Paper':
-        print("Awww, computer wins!")
-        tally['Player'] = 0
-        tally['Computer'] = 1
-    print(tally)
-rock_paper("Rock")
+
+# kata: https://www.codewars.com/kata/56170e844da7c6f647000063/train/python
+def people_with_age_drink(age):
+    assert isinstance(age, (int, float)) and not isinstance(age, bool)
+    print(age)
+
+people_with_age_drink(5)
