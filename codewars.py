@@ -48,7 +48,14 @@ def square_sum(numbers):
 # kata: https://www.codewars.com/kata/5e0baea9d772160032022e8c/train/python
 
 def compute_ranks(number, games):
+    # create team list
     num_teams = range(number)
     teams = list(map(lambda x: "Team" + str(x + 1), list(num_teams)))
-    print(teams)
-compute_ranks(5,5)
+    points = {}
+    for team in teams:
+        if team == games[0]:
+            points.update({team: games[2]})
+        elif team == games[1]:
+            points.update({team: games[3]})
+    print(points)
+compute_ranks(5,['Team1','Team2',2,5])
