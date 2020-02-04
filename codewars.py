@@ -52,10 +52,24 @@ def compute_ranks(number, games):
     num_teams = range(number)
     teams = list(map(lambda x: "Team" + str(x + 1), list(num_teams)))
     points = {}
+
+    # calculate goals scored 'for'
     for team in teams:
         if team == games[0]:
-            points.update({team: games[2]})
+            points.update({team + " - for": games[2]})
+            points.update({team + " - against": games[3]})
         elif team == games[1]:
-            points.update({team: games[3]})
+            points.update({team + " - for": games[3]})
+            points.update({team + " - against": games[2]})
     print(points)
-compute_ranks(5,['Team1','Team2',2,5])
+        
+# compute_ranks(5,['Team1','Team2',2,5])
+
+# kata: https://www.codewars.com/kata/5583090cbe83f4fd8c000051/solutions/python
+def digitize(n):
+    x = list(str(n))
+    y = [int(i) for i in x]
+    y.reverse()
+    return y
+
+
