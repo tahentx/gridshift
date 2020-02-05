@@ -72,4 +72,8 @@ def digitize(n):
     y.reverse()
     return y
 
-
+# kata: https://www.codewars.com/kata/537529f42993de0e0b00181f/train/python
+def count_inversions(array):
+    proper = [x for x in array if array[x + 1] - array[x] == 1]
+    print(proper)
+count_inversions([4,5,9,10,3])
