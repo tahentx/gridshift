@@ -82,7 +82,17 @@ def min_taxis(requests):
     requests.sort(key=lambda tup: tup[0])
     for index, item in enumerate(requests):
         next_ride = index + 1
-        print(index, item, next_ride)
+        print(item, item[next_ride])
    
 
-min_taxis([(9,11),(12,3),[10,11]])
+# min_taxis([(9,11),(12,3),[10,11]])
+
+def alternate_sort(l):
+    absolute = sorted(l,key=abs)
+    negs = list(filter(lambda x: x < 0, absolute))
+    pos = list(filter(lambda x: x > 0, absolute))
+    merged = list(zip(negs,pos))
+    final = [y for x in merged for y in x]
+    print(final)
+
+alternate_sort([-5,3,6,-13,-2,4])
