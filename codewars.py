@@ -76,4 +76,13 @@ def digitize(n):
 def count_inversions(array):
     proper = [x for x in array if array[x + 1] - array[x] == 1]
     print(proper)
-count_inversions([4,5,9,10,3])
+# count_inversions([4,5,9,10,3])
+
+def min_taxis(requests):
+    requests.sort(key=lambda tup: tup[0])
+    for index, item in enumerate(requests):
+        next_ride = index + 1
+        print(index, item, next_ride)
+   
+
+min_taxis([(9,11),(12,3),[10,11]])
