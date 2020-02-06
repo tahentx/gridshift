@@ -93,6 +93,14 @@ def alternate_sort(l):
     pos = list(filter(lambda x: x > 0, absolute))
     merged = list(zip(negs,pos))
     final = [y for x in merged for y in x]
-    print(final)
+    return final
 
-alternate_sort([-5,3,6,-13,-2,4])
+# alternate_sort([-5,3,6,-13,-2,4])
+
+# kata: https://www.codewars.com/kata/5da558c930187300114d874e/train/python
+from collections import namedtuple
+
+MountingType = namedtuple('MountingType', ['tilt','azimuth','tracking'])
+aberdeen = MountingType(145,150,False)
+print(aberdeen.azimuth)
+print(aberdeen[1])
