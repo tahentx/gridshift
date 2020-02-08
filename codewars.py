@@ -116,12 +116,13 @@ def hidden(num: int) -> str:
     a = Variable('a',6)
     b = Variable('b',1)
     catalog = [a,b]
-    num_list = list(num)
+    num_list = [int(x) for x in str(num)]
     decoded = []
-    for var in catalog:
-        for x in range(len(num_list)):
-            if x == var.int:
-                decoded.append(var.char)
+    for item in catalog:
+        for num in num_list:
+            if item.int == num:
+                decoded.append(item.char)
+
     print(decoded)
     
 hidden(5565)
