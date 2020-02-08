@@ -101,6 +101,27 @@ def alternate_sort(l):
 from collections import namedtuple
 
 MountingType = namedtuple('MountingType', ['tilt','azimuth','tracking'])
-aberdeen = MountingType(145,150,False)
-print(aberdeen.azimuth)
-print(aberdeen[1])
+stockton = MountingType(44,44,True)
+# print(stockton.tracking)
+
+Stats = namedtuple('FinalStats', ['points','rebounds','assists'])
+bradley = Stats(12,8,8)
+# print(bradley.rebounds)
+
+# kata: https://www.codewars.com/kata/5906a218dfeb0dbb52000005/train/python
+def hidden(num: int) -> str:
+    assert num in range(100,999999)
+    from collections import namedtuple
+    Variable = namedtuple('Variable',['char','int'])
+    a = Variable('a',6)
+    b = Variable('b',1)
+    catalog = [a,b]
+    num_list = list(num)
+    decoded = []
+    for var in catalog:
+        for x in range(len(num_list)):
+            if x == var.int:
+                decoded.append(var.char)
+    print(decoded)
+    
+hidden(5565)
