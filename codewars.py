@@ -109,20 +109,28 @@ bradley = Stats(12,8,8)
 # print(bradley.rebounds)
 
 # kata: https://www.codewars.com/kata/5906a218dfeb0dbb52000005/train/python
-def hidden(num: int) -> str:
+def hidden(num: int) -> list:
     assert num in range(100,999999)
     from collections import namedtuple
     Variable = namedtuple('Variable',['char','int'])
     a = Variable('a',6)
     b = Variable('b',1)
-    catalog = [a,b]
+    d = Variable('d',7)
+    e = Variable('e',4)
+    i = Variable('i',3)
+    l = Variable('l',2)
+    m = Variable('m',9)
+    n = Variable('n',8)
+    o = Variable('o',0)
+    t = Variable('t',5)
+    catalog = [a,b,d,e,i,l,m,n,o,t]
     num_list = [int(x) for x in str(num)]
     decoded = []
-    for item in catalog:
-        for num in num_list:
+    for num in num_list:
+        for item in catalog:
             if item.int == num:
                 decoded.append(item.char)
-
-    print(decoded)
+    answer = "".join(decoded).lower()
+    return answer
     
-hidden(5565)
+hidden(567095)
