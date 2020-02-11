@@ -131,6 +131,25 @@ def hidden(num: int) -> list:
             if item.int == num:
                 decoded.append(item.char)
     answer = "".join(decoded).lower()
-    return answer
+    print(answer)
     
-hidden(567095)
+# hidden(567095)
+
+def rolldice_sum_prob(sum, dice_amount):
+    assert (dice_amount * 6) <= sum
+    print("ok")
+# rolldice_sum_prob(45,3)
+
+# kata: https://www.codewars.com/kata/5e2596a9ad937f002e510435/train/python
+def infected(s):
+    lands = s.split('X')
+    total = sum(map(len, lands))
+    infected = sum(len(x) for x in lands if '1' in x)
+    return infected * 100 / (total or 1)
+        
+            
+           
+    
+
+
+
