@@ -146,9 +146,35 @@ def infected(s):
     total = sum(map(len, lands))
     infected = sum(len(x) for x in lands if '1' in x)
     return infected * 100 / (total or 1)
-        
-            
-           
+
+
+inv = '8965RMA90009002RMA9010'
+
+def shipment_analysis(units):
+    goods = units.split('RMA')
+    quality = sum(map(len,goods))
+    warranty = sum(len(x) for x in goods if int(x) > 5)
+    
+    print(quality)
+    print(warranty)
+# shipment_analysis(inv)
+# 
+# kata: https://www.codewars.com/kata/569d488d61b812a0f7000015/train/python
+def data_reverse(data):
+    bit = data[::8]
+    print(bit)
+
+# data_reverse([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+
+# kata: https://www.codewars.com/kata/56af1a20509ce5b9b000001e/train/python
+def travel(r):
+    import re
+    # single = r.split(',')
+    zip_code = re.compile(r'\d{5}')
+    zip_list = zip_code.findall(r)
+    unique_zip_codes = set(zip_list)
+    print(unique_zip_codes)
+travel("123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432")
     
 
 
