@@ -190,6 +190,7 @@ def fillable(stock,merch,n):
         else:
             return False
     
-fillable({'foo' : 5},'foo',8)
+# fillable({'foo' : 5},'foo',8)
+
 
 
