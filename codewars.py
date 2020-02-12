@@ -193,4 +193,14 @@ def fillable(stock,merch,n):
 # fillable({'foo' : 5},'foo',8)
 
 
+def close_compare(a,b,margin):
+    if (b - a) >= 0:
+        print("1")
+    elif margin >= abs(b - a):
+        print("0")
+    elif (a - b) >= 0:
+        print("1")
+
+close_compare(5,3,1)
+
 
