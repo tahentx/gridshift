@@ -169,9 +169,12 @@ def data_reverse(data):
 # kata: https://www.codewars.com/kata/56af1a20509ce5b9b000001e/train/python
 def travel(r):
     import re
-    # single = r.split(',')
-    zip_code = re.compile(r'\d{5}')
-    zip_list = zip_code.findall(r)
+    single = r.split(',')
+    for x in single:
+        zip_code = re.compile(r'\d{5}')
+        zip_list = zip_code.findall(x)
+
+    
     unique_zip_codes = set(zip_list)
     print(unique_zip_codes)
 travel("123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432")
