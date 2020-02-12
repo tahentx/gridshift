@@ -7,6 +7,11 @@ means_of_travel = {
     'Work at home' : 7
 }
 
-total = sum(means_of_travel.values())
-walk = means_of_travel['Walk']/total
-print(walk)
+# khan academy exercise : https://www.khanacademy.org/math/statistics-probability/probability-library/basic-theoretical-probability/v/probability-1-module-examples?modal=1
+
+def prob_multiple(lst):
+    denom = len(lst)
+    numer = [x for x in lst if x % 5 == 0]
+    answer = len(numer)/denom
+    print(str(answer))
+prob_multiple([32,49,55,30,56,28,50,40,40,45,3,25])
