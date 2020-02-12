@@ -177,8 +177,17 @@ def travel(r):
     
     unique_zip_codes = set(zip_list)
     print(unique_zip_codes)
-travel("123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432")
-    
+# travel("123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432")
 
+# kata: https://www.codewars.com/kata/586ee462d0982081bf001f07
+def fillable(stock,merch,n):
+    for key,value in stock.items():
+        if merch == key:
+            if (value - n) >= 0: 
+                return True
+            else:
+                return False
+    
+fillable({'foo' : 5},'foo',8)
 
 
