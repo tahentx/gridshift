@@ -187,6 +187,8 @@ def fillable(stock,merch,n):
                 return True
             else:
                 return False
+        else:
+            return False
     
 fillable({'foo' : 5},'foo',8)
 
