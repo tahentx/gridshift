@@ -252,3 +252,11 @@ def name_shuffler(str_):
     foo = ' '.join(shuffled[::-1])
     return foo
 name_shuffler("Billy Buckets")
+
+# kata: https://www.codewars.com/kata/59c8b38423dacc7d95000008/train/python
+def is_valid(formula):
+    assert isinstance(formula,list)
+    print(formula)
+
+is_valid([1,2,3])
+
