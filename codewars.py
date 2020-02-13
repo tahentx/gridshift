@@ -232,13 +232,16 @@ def make_negative(number):
         return number * -1
 
 def odd_one_out(s):
-    s = list(s)
+    s = s.split()
     unpaired = []
-    paired = [x for x in s if s.count(x) % 2 == 0]
-    for letter in s:
-        if letter not in paired:
-            unpaired.append(letter)
-        else:
-            pass
+    paired = []
+    for word in s:
+        word = list(word)
+        for letter in word:
+            if word.count(letter) % 2 == 0:
+                paired.append(letter)
+                unpaired.append(' ')
+            else:
+                unpaired.append(letter)
     return unpaired
-odd_one_out("racecar")
+odd_one_out("Hello World")
