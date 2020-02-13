@@ -272,3 +272,9 @@ def is_valid(formula):
     
 is_valid([2,3,4])
 
+# kata: https://www.codewars.com/kata/577e694af5db624cf30002d0/train/python
+def closest_sum(ints,num):
+    assert isinstance(ints,list)
+    assert isinstance(num,int)
+
+    
