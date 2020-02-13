@@ -261,7 +261,14 @@ def is_valid(formula):
         return False
     elif '3' in template and '4' in template:
         return False
-    # else:
-    #     print(template)
+    elif '5' in template and '6' not in template:
+        return False
+    elif '6' in template and '5' not in template:
+        return False
+    elif '7' not in template and '8' not in template:
+        return False
+    else:
+        return True
+    
 is_valid([2,3,4])
 
