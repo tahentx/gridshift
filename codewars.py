@@ -245,3 +245,10 @@ def odd_one_out(s):
                 unpaired.append(letter)
     return unpaired
 odd_one_out("Hello World")
+
+# kata: https://www.codewars.com/kata/559ac78160f0be07c200005a/solutions/python
+def name_shuffler(str_):
+    shuffled = str_.split()
+    foo = ' '.join(shuffled[::-1])
+    return foo
+name_shuffler("Billy Buckets")
