@@ -195,12 +195,21 @@ def fillable(stock,merch,n):
 
 def close_compare(a,b,margin):
     if (b - a) >= 0:
-        print("1")
+        return -1
     elif margin >= abs(b - a):
-        print("0")
+        return 0
     elif (a - b) >= 0:
-        print("1")
+        return 1
 
-close_compare(5,3,1)
+# close_compare(5,3,1)
 
+def who_is_paying(name):
+    hoa = []
+    if len(name) > 2:
+        hoa.append(name)
+        hoa.append(name[:2])
+    else:
+        hoa.append(name)
+    return hoa
+who_is_paying("Cholo")
 
