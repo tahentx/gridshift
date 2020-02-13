@@ -256,7 +256,12 @@ name_shuffler("Billy Buckets")
 # kata: https://www.codewars.com/kata/59c8b38423dacc7d95000008/train/python
 def is_valid(formula):
     assert isinstance(formula,list)
-    print(formula)
-
-is_valid([1,2,3])
+    template = [str(i) for i in formula]
+    if '1' in template and '2' in template:
+        return False
+    elif '3' in template and '4' in template:
+        return False
+    # else:
+    #     print(template)
+is_valid([2,3,4])
 
