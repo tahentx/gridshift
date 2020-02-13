@@ -230,4 +230,15 @@ def make_negative(number):
         pass
     else:
         return number * -1
-        
+
+def odd_one_out(s):
+    s = list(s)
+    unpaired = []
+    paired = [x for x in s if s.count(x) % 2 == 0]
+    for letter in s:
+        if letter not in paired:
+            unpaired.append(letter)
+        else:
+            pass
+    return unpaired
+odd_one_out("racecar")
