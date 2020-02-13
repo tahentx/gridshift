@@ -222,4 +222,12 @@ def count_letters_and_digits(s):
     combine = digs + alpha
     return sum(bool(x) for x in combine)
 
-count_letters_and_digits("55bsdf9")
+# count_letters_and_digits("55bsdf9")
+
+def make_negative(number):
+    assert number.isnumeric()
+    if number < 0:
+        pass
+    else:
+        return number * -1
+        
