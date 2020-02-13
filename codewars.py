@@ -276,5 +276,9 @@ is_valid([2,3,4])
 def closest_sum(ints,num):
     assert isinstance(ints,list)
     assert isinstance(num,int)
+    diff = list(map(lambda x: num - x,ints))
+    while len(diff) > 3:
+        diff.remove(max(diff))
+    return sum(diff)
 
-    
+closest_sum([3,4,5,1],6)
