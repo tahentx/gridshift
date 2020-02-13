@@ -213,3 +213,13 @@ def who_is_paying(name):
     return hoa
 who_is_paying("Cholo")
 
+# kata: https://www.codewars.com/kata/5738f5ea9545204cec000155/train/python
+
+def count_letters_and_digits(s):
+    s_lst = list(s)
+    digs = list(map(lambda x: x.isdigit(),s_lst))
+    alpha = list(map(lambda y: y.isalpha(),s_lst))
+    combine = digs + alpha
+    return sum(bool(x) for x in combine)
+
+count_letters_and_digits("55bsdf9")
