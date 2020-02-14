@@ -317,3 +317,9 @@ def title_case(title,minor_words):
             proper.append(word.title())
     return proper
 title_case("This is a test","this a")
+
+def distribute(nodes,workload):
+    entire_load = [x for x in range(workload)]
+    allocation = entire_load[:nodes]
+    print(allocation)
+distribute(4,16)
