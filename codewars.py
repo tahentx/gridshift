@@ -280,4 +280,16 @@ def closest_sum(ints,num):
         ints.remove(max(list(map(lambda x: num - x,ints))))
     print(sum(ints))        
 
-closest_sum([3,4,5,1],6)
+# closest_sum([3,4,5,1],6)
+
+# kata: https://www.codewars.com/kata/5547929140907378f9000039
+def shortcut(s):
+    s = list(s.lower())
+    vowels = ['a','e','i','o','u']
+    for vowel in vowels:
+        if vowel in s:
+            s.remove(vowel)
+    s = ''.join(s)
+    print(s)        
+        
+shortcut("hello")
