@@ -300,8 +300,20 @@ def golf_score_calculator(par_string,score_string):
     card = list(zip(par_string,score_string))
     score = [(int(x[1]) - int(x[0])) for x in card]
     return (sum(score))
-        
 
-    
-
-golf_score_calculator([5,4,5],[4,4,3])
+# golf_score_calculator([5,4,5],[4,4,3])
+# kata: https://www.codewars.com/kata/5202ef17a402dd033c000009/train/python
+def title_case(title,minor_words):
+    assert isinstance(title,str)
+    title = title.split()
+    minor = minor_words.split()
+    proper = []
+    for word in title:
+        if word in minor and title.index(word) != 0:
+            proper.append(word.lower())
+        elif word not in minor:
+            proper.append(word.title())
+        elif word in minor and title.index(word) == 0:
+            proper.append(word.title())
+    return proper
+title_case("This is a test","this a")
