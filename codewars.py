@@ -292,4 +292,16 @@ def shortcut(s):
     s = ''.join(s)
     print(s)        
         
-shortcut("hello")
+# shortcut("hello")
+
+# kata: https://www.codewars.com/kata/59f7a0a77eb74bf96b00006a/train/python
+def golf_score_calculator(par_string,score_string):
+    assert len(par_string) == len(score_string)
+    card = list(zip(par_string,score_string))
+    score = [(int(x[1]) - int(x[0])) for x in card]
+    return (sum(score))
+        
+
+    
+
+golf_score_calculator([5,4,5],[4,4,3])
