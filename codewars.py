@@ -321,5 +321,18 @@ title_case("This is a test","this a")
 def distribute(nodes,workload):
     entire_load = [x for x in range(workload)]
     allocation = entire_load[:nodes]
-    print(allocation)
-distribute(4,16)
+    foo = [dist for dist in enumerate(entire_load, start=1) if entire_load.index(dist) % len(allocation) == 0]
+    print(foo)
+    
+# distribute(4,16)
+
+# kata: https://www.codewars.com/kata/5715eaedb436cf5606000381
+def positive_sum(arr):
+    if not arr:
+        return 0
+    else:
+        return sum(list(filter(lambda x: x > 0, arr)))
+
+    
+
+positive_sum([1,-4,7,12])
