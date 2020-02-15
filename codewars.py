@@ -332,7 +332,19 @@ def positive_sum(arr):
         return 0
     else:
         return sum(list(filter(lambda x: x > 0, arr)))
+# positive_sum([1,-4,7,12])
 
-    
+# kata: https://www.codewars.com/kata/54da539698b8a2ad76000228/train/python
+def is_valid_walk(walk: list) -> bool:
+    dist_to_origin = 0
+    steps = []
+    for step in walk:
+        steps.append(step)
 
-positive_sum([1,-4,7,12])
+    dist = dist_to_origin - sum(steps)
+    print(dist)
+    if sum(steps) == 10:
+        return True
+            
+
+
