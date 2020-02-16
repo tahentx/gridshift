@@ -349,5 +349,18 @@ def is_valid_walk(walk: list) -> bool:
 def between(a,b):
     return [i for i in range(a,(b+1))]
 
+# kata: https://www.codewars.com/kata/5672682212c8ecf83e000050/train/python
+def dbl_linear(n):
+    a = 1
+    cont = []
+    for num in range(n):
+        foo = a * num + 1
+        cont.append(foo)
+        a = a + 1
+    print(cont)
+    for ind,value in enumerate(cont):
+        if n == ind:
+            print(value)
 
+dbl_linear(2)     
 
