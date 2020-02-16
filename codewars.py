@@ -345,6 +345,9 @@ def is_valid_walk(walk: list) -> bool:
     print(dist)
     if sum(steps) == 10:
         return True
-            
+# kata: https://www.codewars.com/kata/55ecd718f46fba02e5000029/train/python            
+def between(a,b):
+    return [i for i in range(a,(b+1))]
+
 
 
