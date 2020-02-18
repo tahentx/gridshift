@@ -362,5 +362,20 @@ def dbl_linear(n):
         if n == ind:
             print(value)
 
-dbl_linear(2)     
+# dbl_linear(2)
+
+def combine(a,b):
+    c = list(zip(a,b))
+    print(type(c))
+    print(c)
+# combine([1,3,5],['a','b','c'])
+
+# kata: https://www.codewars.com/kata/582cb0224e56e068d800003c
+def litres(time):
+    x = truncate(time)
+    print(x)
+
+litres(11.68)
+
+
 
