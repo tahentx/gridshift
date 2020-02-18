@@ -372,11 +372,10 @@ def combine(a,b):
 
 # kata: https://www.codewars.com/kata/586f5808aa04285bc800009d
 def modes(data):
-    tally = [[x,data.count(x)] for x in set(data)]
-    for item in tally:
-        if all(item[1]) == True:
-            print([])
-        else: 
-            print("Mode present")
+    set_of_data = set(data)
+    if len(set_of_data) == len(data):
+        return []
+    else:
+        return max(data,key=data.count)
 modes('spoon')
 
