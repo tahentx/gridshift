@@ -370,12 +370,13 @@ def combine(a,b):
     print(c)
 # combine([1,3,5],['a','b','c'])
 
-# kata: https://www.codewars.com/kata/582cb0224e56e068d800003c
-def litres(time):
-    x = truncate(time)
-    print(x)
-
-litres(11.68)
-
-
+# kata: https://www.codewars.com/kata/586f5808aa04285bc800009d
+def modes(data):
+    tally = [[x,data.count(x)] for x in set(data)]
+    for item in tally:
+        if all(item[1]) == True:
+            print([])
+        else: 
+            print("Mode present")
+modes('spoon')
 
