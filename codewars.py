@@ -377,5 +377,8 @@ def modes(data):
         return []
     else:
         return max(data,key=data.count)
-modes('spoon')
+# modes('spoon')
+
+def sorter(textbooks):
+    return sorted(textbooks,key=str.casefold)
 
