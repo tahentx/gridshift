@@ -413,3 +413,13 @@ def solution(s):
     lsd = ''.join([str(elem) for elem in container]) 
     return lsd
 solution("blueBridge")
+
+# kata: https://www.codewars.com/kata/55d9f257d60c5fd98d00001b/train/python
+def remove_duplicates(head):
+    try:
+        output = list(set(head))
+        output.sort(reverse=True)
+        return output
+    except:
+        return None
+remove_duplicates(['T','i','i','nil','m','e'])
