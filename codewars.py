@@ -398,4 +398,18 @@ letter_count("Walrus")
 def invert(lst):
     x = list(map(lambda x: x * -1,lst))
     print(x)
-invert([4,5,32])
+# invert([4,5,32])
+
+# kata: https://www.codewars.com/kata/5208f99aee097e6552000148/train/python
+def solution(s):
+    s = list(s)
+    container = []
+    for letter in s:
+        if letter.isupper():
+            container.append(" ")
+            container.append(letter)
+        else:
+            container.append(letter)
+    lsd = ''.join([str(elem) for elem in container]) 
+    return lsd
+solution("blueBridge")
