@@ -393,3 +393,9 @@ def letter_count(s):
             dict[item] = 1
     return dict
 letter_count("Walrus")
+
+# kata: https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad/train/python
+def invert(lst):
+    x = list(map(lambda x: x * -1,lst))
+    print(x)
+invert([4,5,32])
