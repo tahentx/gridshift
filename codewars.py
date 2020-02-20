@@ -422,4 +422,22 @@ def remove_duplicates(head):
         return output
     except:
         return None
-remove_duplicates(['T','i','i','nil','m','e'])
+# remove_duplicates(['T','i','i','nil','m','e'])
+
+def tax_calculator(amount):
+    tax_rate = {
+        "AL" : .09,
+        "AK" : .045,
+        "AZ" : .07
+    }
+    amount = input("What is the amount?")
+    state = input("What is the state?")
+    for key,value in tax_rate.items():
+        if state == key:
+            tax_applied = int(amount * value) + amount
+        else:
+            "We do not have your state sales tax rate yet. We apologize for the inconvenience."
+    print("The total is " + str(amount))
+    print("The total with tax applied is " + str(tax_applied))        
+
+tax_calculator(55)
