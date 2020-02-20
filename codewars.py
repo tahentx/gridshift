@@ -382,3 +382,14 @@ def modes(data):
 def sorter(textbooks):
     return sorted(textbooks,key=str.casefold)
 
+# kata: https://www.codewars.com/kata/5808ff71c7cfa1c6aa00006d
+def letter_count(s):
+    dict = {}
+    for item in s:
+        keys = dict.keys()
+        if item in keys:
+            dict[item] += 1
+        else:
+            dict[item] = 1
+    return dict
+letter_count("Walrus")
