@@ -440,4 +440,19 @@ def tax_calculator(amount):
     print("The total is " + str(amount))
     print("The total with tax applied is " + str(tax_applied))        
 
-tax_calculator(55)
+# tax_calculator(55)
+
+def exchange_with(a,b):
+    zipped = zip(a,b)
+    new_a = []
+    new_b = []
+    for x,y in zipped:
+        new_b.append(x)
+        new_a.append(y)
+    a = new_a
+    b = new_b
+    return a,b
+        
+
+exchange_with(['a','b','c'],['x','y','z'])
+
