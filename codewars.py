@@ -491,5 +491,22 @@ def second_solution(string,ending):
         print("True")
     else:
         print("False")
-second_solution("testing","bing")
+# second_solution("testing","bing")
 
+# kata: https://www.codewars.com/kata/5832db03d5bafb7d96000107/train/python
+def lottery(s):
+    s = list(s)
+    z = []
+    for char in s:
+        if char.isdigit():
+            z.append(char)
+        else:
+            pass
+    
+    answer = list(set(z))
+    if answer == []:
+        return "One more run!"
+    else:
+        boo = ''.join(answer)
+        return boo
+lottery("blah")
