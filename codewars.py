@@ -510,3 +510,18 @@ def lottery(s):
         boo = ''.join(answer)
         return boo
 lottery("blah")
+
+
+# kata: https://www.codewars.com/kata/5ce399e0047a45001c853c2b/train/python
+def parts_sum(ls):
+    assert isinstance(ls,list)
+    cont = []
+    while len(ls) > 0:
+        x = sum(ls)
+        cont.append(x)
+        del ls[0]
+    print(cont)
+    
+
+        
+parts_sum([5,6,9,10])
