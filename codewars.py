@@ -456,3 +456,8 @@ def exchange_with(a,b):
 
 exchange_with(['a','b','c'],['x','y','z'])
 
+def unpack(l):
+    import itertools
+    flatten = itertools.chain.from_iterable
+    return list(flatten(l))
+unpack(["off",["the","chain"]])
