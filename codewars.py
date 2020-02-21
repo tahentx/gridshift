@@ -520,8 +520,23 @@ def parts_sum(ls):
         x = sum(ls)
         cont.append(x)
         del ls[0]
-    print(cont)
-    
+    print(cont)        
+# parts_sum([5,6,9,10])
 
-        
-parts_sum([5,6,9,10])
+# kata: https://www.codewars.com/kata/5727bb0fe81185ae62000ae3/train/python
+def clean_string(s):
+    s = list(s)
+    z = s[:]
+    pieces = []
+    for x,y in enumerate(z):
+        if y == '#':
+            chunk_one = z[:x]
+            chunk_two = z[x:]
+            del chunk_one[-1]
+            pieces.append(chunk_one)
+            pieces.append(chunk_two)
+        else:
+            pass
+    
+    print(pieces)
+clean_string("Balu#ga")
