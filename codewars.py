@@ -469,4 +469,16 @@ def better_than_average(class_points,your_points):
         return True 
     else:
         return False
-better_than_average([98,78,80],86)
+# better_than_average([98,78,80],86)
+def no_boring_zeroes(n):
+    n_two = list(str(n))
+    n_len = len(n_two)-1
+    for index,x in enumerate(n_two):
+        if index == n_len:
+            if x == '0':
+                foo = n_two[:int(index)]
+                blah = int(''.join(foo))
+                return blah
+        else:
+            pass
+no_boring_zeroes(150430)
