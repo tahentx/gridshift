@@ -481,4 +481,15 @@ def no_boring_zeroes(n):
                 return blah
         else:
             pass
-no_boring_zeroes(150430)
+# no_boring_zeroes(150430)
+
+# kata: https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/python
+def second_solution(string,ending):
+    chunk = -(len(ending))
+    x = str(string[chunk:])
+    if ending == x:
+        print("True")
+    else:
+        print("False")
+second_solution("testing","bing")
+
