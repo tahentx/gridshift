@@ -539,4 +539,13 @@ def clean_string(s):
             pass
     
     print(pieces)
-clean_string("Balu#ga")
+# clean_string("Balu#ga")
+
+# kata: https://www.codewars.com/kata/598ee7b6ec6cb90dd6000061/train/python
+def count_repeats(txt):
+    from itertools import groupby
+    x = list(txt)
+    count_dups = [sum(1 for _ in group) for _, group in groupby(x)]
+    y = list(filter(lambda x: x > 1, count_dups))
+    return len(y)
+count_repeats("Balling")
