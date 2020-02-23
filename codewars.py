@@ -549,3 +549,13 @@ def count_repeats(txt):
     y = list(filter(lambda x: x > 1, count_dups))
     return len(y)
 count_repeats("Balling")
+
+from itertools import tee
+# kata: https://www.codewars.com/kata/58afa8185eb02ea2a7000094/train/python
+def pairwise(arr,a,b):
+    a, b = tee(arr)
+    next(b, None)
+    x = zip(a, b)
+    for i in x:
+        print(sum(i))
+pairwise([3,5,23],5,6)
