@@ -558,4 +558,18 @@ def pairwise(arr,a,b):
     x = zip(a, b)
     for i in x:
         print(sum(i))
-pairwise([3,5,23],5,6)
+# pairwise([3,5,23],5,6)
+
+# kata: https://www.codewars.com/kata/59706036f6e5d1e22d000016/train/python
+import string
+def words_to_marks(s):
+    s = list(s)
+    x = list(string.ascii_lowercase)
+    values = []
+    for idx,item in enumerate(x):
+        if item in s:
+            values.append(idx)
+    summed = sum(values)
+    return summed    
+
+words_to_marks("blue")
