@@ -587,3 +587,19 @@ def absent_vowel(x):
 def index_equals_value(arr):
     result = [idx if idx else None for idx,val in enumerate(arr) if idx == val]
     return min(result)
+
+# kata: https://www.codewars.com/kata/5ac6932b2f317b96980000ca/train/python
+def min_value(digits):
+    from itertools import permutations
+    one = str(digits)
+    two = list(one)
+    three = set(two)
+    x = permutations(three,len(three))
+    clean = []
+    for value in x:
+        string = ''.join(value)
+        num = int(string)
+        clean.append(num)
+    answer = min(clean)
+    return answer
+min_value(5523)
