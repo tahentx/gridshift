@@ -585,5 +585,5 @@ def absent_vowel(x):
 
 # kata: https://www.codewars.com/kata/5b7176768adeae9bc9000056/train/python
 def index_equals_value(arr):
-    result = [idx for idx,val in enumerate(arr) if idx == val]
+    result = [idx if idx else None for idx,val in enumerate(arr) if idx == val]
     return min(result)
