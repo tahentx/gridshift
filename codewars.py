@@ -581,4 +581,9 @@ def absent_vowel(x):
     answer = [i for i, item in enumerate(vowels) if item not in list(x)]
     return int(answer[0])
     
-absent_vowel("Bb Smith sent us six neatly arranged range bicycles")
+# absent_vowel("Bb Smith sent us six neatly arranged range bicycles")
+
+# kata: https://www.codewars.com/kata/5b7176768adeae9bc9000056/train/python
+def index_equals_value(arr):
+    result = [idx for idx,val in enumerate(arr) if idx == val]
+    return min(result)
