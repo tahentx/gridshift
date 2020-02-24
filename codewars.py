@@ -572,4 +572,13 @@ def words_to_marks(s):
     summed = sum(values)
     return summed    
 
-words_to_marks("blue")
+# words_to_marks("blue")
+
+# kata: https://www.codewars.com/kata/56414fdc6488ee99db00002c/train/python
+def absent_vowel(x):
+    x = x.upper()
+    vowels = ["A","E","I","O","U"]
+    answer = [i for i, item in enumerate(vowels) if item not in list(x)]
+    return int(answer[0])
+    
+absent_vowel("Bb Smith sent us six neatly arranged range bicycles")
