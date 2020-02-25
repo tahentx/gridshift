@@ -616,7 +616,7 @@ def up_array(arr):
     final = list(str(plus_one))
     vibe = [int(x) for x in final]
     return vibe
-            
+    
             
         
-up_array([2,35,3])
+up_array([2,35,3,-3])
