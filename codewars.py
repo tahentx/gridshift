@@ -616,7 +616,18 @@ def up_array(arr):
     final = list(str(plus_one))
     vibe = [int(x) for x in final]
     return vibe
-    
-            
-        
-up_array([2,35,3,-3])
+          
+# up_array([2,35,3,-3])
+
+# kata: https://www.codewars.com/kata/5a4bdd73d8e145f17d000035/train/python
+def sort_nested_list(A):
+    import itertools
+    merged = list(itertools.chain(*A))
+    new_list = []
+    for pair in merged:
+        x = sorted(pair)
+        new_list.append(x)
+    final_list = []
+    final_list.append(new_list)
+    return final_list
+sort_nested_list([[[2, 1], [4, 3]], [[6, 5], [8, 7]]])
