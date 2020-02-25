@@ -635,6 +635,9 @@ sort_nested_list([[[2, 1], [4, 3]], [[6, 5], [8, 7]]])
 # kata: https://www.codewars.com/kata/5868b2de442e3fb2bb000119/train/python
 def closest(strng):
     lst = strng.split()
-    weight_set = [list(set(x)) for x in lst]
-    return weight_set
+    for item in lst:
+        item = [value for value in set(item)]
+        intgr = [int(z) for z in item]
+        weight = sum(intgr)
+        return weight
 closest("444 820 742")
