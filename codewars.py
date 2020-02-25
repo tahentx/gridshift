@@ -631,3 +631,10 @@ def sort_nested_list(A):
     final_list.append(new_list)
     return final_list
 sort_nested_list([[[2, 1], [4, 3]], [[6, 5], [8, 7]]])
+
+# kata: https://www.codewars.com/kata/5868b2de442e3fb2bb000119/train/python
+def closest(strng):
+    lst = strng.split()
+    weight_set = [list(set(x)) for x in lst]
+    return weight_set
+closest("444 820 742")
