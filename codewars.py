@@ -602,4 +602,21 @@ def min_value(digits):
         clean.append(num)
     answer = min(clean)
     return answer
-min_value(5523)
+# min_value(5523)
+
+def up_array(arr):
+    for char in arr:
+        if isinstance(char,int):
+            pass
+        else: 
+            return None
+    foo = list(filter(lambda x: 10 > x > 0, arr))
+    lst_foo = int(''.join([str(elem) for elem in foo]))
+    plus_one = lst_foo + 1
+    final = list(str(plus_one))
+    vibe = [int(x) for x in final]
+    return vibe
+            
+            
+        
+up_array([2,35,3])
