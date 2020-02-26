@@ -638,6 +638,13 @@ def closest(strng):
     for item in lst:
         item = [value for value in set(item)]
         intgr = [int(z) for z in item]
-        weight = sum(intgr)
-        return weight
-closest("444 820 742")
+        print(type(intgr))
+# closest("444 820 742")
+
+# kata: https://www.codewars.com/kata/55de6173a8fbe814ee000061/train/python
+def unused_digits(intake):
+    base = [x for x in list(range(0,10))]
+    intake = list(set(intake))
+    output = [value for value in base if value not in intake]
+    return output
+unused_digits([5,3,2,9,3])
