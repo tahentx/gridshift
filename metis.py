@@ -41,8 +41,34 @@ def find_all(array,n):
 #         i += 1
 
 # testing
-
+from functools import reduce
 def sum_of_minimums(numbers):
-    mins = [min(n) for n in numbers]
-    return sum(mins)
-sum_of_minimums([ [ 7,9,8,6,2 ], [6,3,5,4,3], [5,8,7,4,5] ])
+    foo = reduce((lambda x: min(x),numbers))
+    print(foo)
+# sum_of_minimums([ [ 7,9,8,6,2 ], [6,3,5,4,3], [5,8,7,4,5] ])
+
+    
+# kata: https://www.codewars.com/kata/56f4ff45af5b1f8cd100067d
+def sort_by_name(arr):
+    import inflect
+    p = inflect.engine()
+    word = p.numbers_to_words(arr)
+    print(word)
+# sort_by_name(55)
+
+# kata: https://www.codewars.com/kata/511f11d355fe575d2c000001/train/python
+def two_oldest_ages(ages):
+    max_ages = [min(x) for x in ages]
+    print(max_ages)
+# two_oldest_ages([14,16,9,4,15])
+import itertools
+import operator
+def max_gap(numbers):
+    numbers.sort()
+    diff = list(itertools.starmap(operator.sub, zip(numbers[1:], numbers)))
+    return max(diff)
+
+# def max_gap(numbers):
+#     lst = sorted(numbers)
+#     return max(b-a for a,b in zip(lst, lst[1:]))
+# max_gap([3,5,9])
