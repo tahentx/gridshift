@@ -33,12 +33,16 @@ def find_all(array,n):
 #     print(count)
 # pattern(10)
 
-import itertools
-def counter(n):
-    i = n
-    while i < 6:
-        print(str(i) * i)
-        i += 1
+# import itertools
+# def counter(n):
+#     i = n
+#     while i < 6:
+#         print(str(i) * i)
+#         i += 1
 
+# testing
 
-counter(1)
+def sum_of_minimums(numbers):
+    mins = [min(n) for n in numbers]
+    return sum(mins)
+sum_of_minimums([ [ 7,9,8,6,2 ], [6,3,5,4,3], [5,8,7,4,5] ])
