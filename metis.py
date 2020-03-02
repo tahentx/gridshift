@@ -123,8 +123,27 @@ def create_divisors_dict(divisors,upper,lower):
 
 # create_divisors_dict([5,4,5],5,9)
 def alphabetized(s):
-    s = s.split()
-    listToStr = ''.join([str(elem) for elem in s])
-    output = sorted(listToStr)
-    print(output) 
-alphabetized("Welcome to the jungle")
+    s = s.strip()
+    print(s)
+alphabetized("Holy ghost holy water")
+
+
+def setter(a,b):
+    a = set(a)
+    b = set(b)
+    c = b.intersection(a)
+    c = ''.join(c)
+    # if equality statement
+    print(c)
+# setter(['a','b','c','d'],['a','b','c','d','e'])
+
+def complex(a):
+    list1 = range(0,20)
+    list2 = [123, 234, 456]
+    d = {'a': [], 'b': []}
+    for val in list1:
+        if val % 2 == 0:
+            d['a'].append(val)
+    print(a)
+    print(d)
+complex(56)
