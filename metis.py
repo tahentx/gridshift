@@ -112,38 +112,44 @@ def can_spell_with(target_word,letter_word):
     output = zip(target_lower,letter_lower)
     print([x for x in output])
 
-def create_divisors_dict(divisors,upper,lower):
+def create_divisors_dict(divisors,lower,upper):
     d = dict((x,[]) for x in divisors)
-    span = range(upper,lower)
-    for key,val in dict:
-        for x in span:
-            if val % key == 0:
-                d.update({key:val})
-    print(d)
+    
+    span = range(lower,upper + 1)
+    for x in span:
+        for key in d.keys():
+            if x % key == 0:
+                d[key].append(x)
+    return d
 
-# create_divisors_dict([5,4,5],5,9)
+create_divisors_dict([1,2,5],2,4)
+
+
 def alphabetized(s):
-    s = s.strip()
-    print(s)
+    print(s.strip())
 alphabetized("Holy ghost holy water")
 
 
-def setter(a,b):
-    a = set(a)
-    b = set(b)
-    c = b.intersection(a)
-    c = ''.join(c)
-    # if equality statement
-    print(c)
-# setter(['a','b','c','d'],['a','b','c','d','e'])
 
-def complex(a):
-    list1 = range(0,20)
-    list2 = [123, 234, 456]
-    d = {'a': [], 'b': []}
-    for val in list1:
-        if val % 2 == 0:
-            d['a'].append(val)
+
+# def complex(a):
+#     list1 = range(0,20)
+#     list2 = [123, 234, 456]
+#     d = {'a': [], 'b': []}
+#     for val in list1:
+#         if val % 2 == 0:
+#             d['a'].append(val)
+#     print(a)
+#     print(d)
+# # complex(56)
+
+# kata: https://www.codewars.com/kata/545f05676b42a0a195000d95/train/python
+def ranks(a):
+    from itertools import count
+    a = list(set(a))
+    base = count(start=1,step=1)
     print(a)
-    print(d)
-complex(56)
+    c = zip(a,base)
+    for x in c:
+        print(x)
+ranks([5,6,2,2,2])
