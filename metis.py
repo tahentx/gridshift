@@ -158,4 +158,15 @@ def duplicates(arr):
         foo = [x for x in arr if arr.count(x) > 1]
         d = len(set(foo))
         return d
-duplicates([5,9,8,5,1,9])
+# duplicates([5,9,8,5,1,9])
+
+# kata: https://www.codewars.com/kata/59c633e7dcc4053512000073/train/python
+def solve(s):
+    import string
+    a = list(string.ascii_lowercase)
+    vals = zip(a,range(1,len(a) + 1))
+    for x in vals:
+        print(x)
+    print(a)
+    print(s)
+solve("Brother")
