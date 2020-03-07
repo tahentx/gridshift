@@ -125,13 +125,6 @@ def create_divisors_dict(divisors,lower,upper):
 create_divisors_dict([1,2,5],2,4)
 
 
-def alphabetized(s):
-    print(s.strip())
-alphabetized("Holy ghost holy water")
-
-
-
-
 # def complex(a):
 #     list1 = range(0,20)
 #     list2 = [123, 234, 456]
@@ -146,10 +139,17 @@ alphabetized("Holy ghost holy water")
 # kata: https://www.codewars.com/kata/545f05676b42a0a195000d95/train/python
 def ranks(a):
     from itertools import count
-    a = list(set(a))
-    base = count(start=1,step=1)
+    a.sort()
+    b = list(set(a))
     print(a)
+    base = count(start=1,step=1)
     c = zip(a,base)
     for x in c:
         print(x)
-ranks([5,6,2,2,2])
+# ranks([5,6,2,2,2])
+
+# kata: https://www.codewars.com/kata/5c55ad8c9d76d41a62b4ede3
+def duplicates(arr):
+    foo = [x for x in arr if arr.count(x) > 1]
+    print(foo)
+duplicates([5,9,8,5,1])
