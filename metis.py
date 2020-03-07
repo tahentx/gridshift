@@ -151,5 +151,6 @@ def ranks(a):
 # kata: https://www.codewars.com/kata/5c55ad8c9d76d41a62b4ede3
 def duplicates(arr):
     foo = [x for x in arr if arr.count(x) > 1]
-    print(foo)
-duplicates([5,9,8,5,1])
+    d = len(set(foo))
+    print(d)
+duplicates([5,9,8,5,1,9])
