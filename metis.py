@@ -166,5 +166,13 @@ def solve(s):
     a = list(string.ascii_lowercase)
     vals = zip(a,range(1,len(a) + 1))
     s = list(s)
-    print(s)
-solve("Brother")
+# solve("Brother")
+
+# kata: https://www.codewars.com/kata/5bdcd20478d24e664d00002c/train/python
+
+def wheat_from_chaff(values):
+    neg_values = list(filter(lambda x: x < 0, values))
+    pos_values = list(filter(lambda x: x > 0, values))
+    combined = neg_values + pos_values
+    return combined
+wheat_from_chaff([-4,-5,2,5,-9])
