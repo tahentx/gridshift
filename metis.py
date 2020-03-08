@@ -165,8 +165,6 @@ def solve(s):
     import string
     a = list(string.ascii_lowercase)
     vals = zip(a,range(1,len(a) + 1))
-    for x in vals:
-        print(x)
-    print(a)
+    s = list(s)
     print(s)
 solve("Brother")
