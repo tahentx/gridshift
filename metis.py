@@ -175,4 +175,12 @@ def wheat_from_chaff(values):
     pos_values = list(filter(lambda x: x > 0, values))
     combined = neg_values + pos_values
     return combined
-wheat_from_chaff([-4,-5,2,5,-9])
+# wheat_from_chaff([-4,-5,2,5,-9])
+
+# kata: https://www.codewars.com/kata/56b861671d36bb0aa8000819/train/python
+def reverse_and_combine_text(text):
+    import itertools
+    text = text.split()
+    foo = slice(0,2)
+    print(text[foo])
+reverse_and_combine_text("Come mister tally man")
