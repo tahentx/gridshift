@@ -183,4 +183,11 @@ def reverse_and_combine_text(text):
     text = text.split()
     foo = slice(0,2)
     print(text[foo])
-reverse_and_combine_text("Come mister tally man")
+# reverse_and_combine_text("Come mister tally man")
+
+# kata: https://www.codewars.com/kata/57f7f71a7b992e699400013f/train/python
+def sort_csv_columns(csv_file_content):
+    columns = csv_file_content[0]
+    columns = columns.split(";")
+    print(columns)
+sort_csv_columns()
