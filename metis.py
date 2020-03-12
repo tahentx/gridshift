@@ -185,9 +185,9 @@ def reverse_and_combine_text(text):
     print(text[foo])
 # reverse_and_combine_text("Come mister tally man")
 
-# kata: https://www.codewars.com/kata/57f7f71a7b992e699400013f/train/python
-def sort_csv_columns(csv_file_content):
-    columns = csv_file_content[0]
-    columns = columns.split(";")
-    print(columns)
-sort_csv_columns()
+# kata: https://www.codewars.com/kata/5b4dee5d05f04bba43000138
+def sorted_comm_by_digs(arr1,arr2):
+    arr1, arr2 = set(arr1), set(arr2)
+    f = arr1.intersection(arr2)
+    print(f)
+sorted_comm_by_digs([5,2,3,5],[9,7,2,5])
