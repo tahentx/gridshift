@@ -189,5 +189,7 @@ def reverse_and_combine_text(text):
 def sorted_comm_by_digs(arr1,arr2):
     arr1, arr2 = set(arr1), set(arr2)
     f = arr1.intersection(arr2)
-    print(f)
-sorted_comm_by_digs([5,2,3,5],[9,7,2,5])
+    res = [int(x) for x in str(f)]
+    squared = list(map(lambda x: x**2, res))
+    print(squared)
+sorted_comm_by_digs([429],[4222])
