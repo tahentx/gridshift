@@ -198,8 +198,6 @@ def sorted_comm_by_digs(arr1,arr2):
 
 # kata: https://www.codewars.com/kata/573c84bf0addf9568d001299/train/python
 def yes_no(arr):
-    for x in arr:
-        if (arr.index(x) + 1) % 2 == 0:
-            arr.remove(x)
-    print(arr)
+    even = list(filter(lambda x: (arr.index(x)) % 2 == 0, arr))
+    print(even)
 yes_no(['Big','bad','wolf','on','the','way'])
