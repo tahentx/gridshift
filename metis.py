@@ -187,9 +187,11 @@ def reverse_and_combine_text(text):
 
 # kata: https://www.codewars.com/kata/5b4dee5d05f04bba43000138
 def sorted_comm_by_digs(arr1,arr2):
-    arr1, arr2 = set(arr1), set(arr2)
-    f = arr1.intersection(arr2)
-    res = [int(x) for x in str(f)]
-    squared = list(map(lambda x: x**2, res))
-    print(squared)
-sorted_comm_by_digs([429],[4222])
+    
+    # f = arr1.intersection(arr2)
+    res = [int(x) for x in str(arr1)]
+    rev = [int(x) for x in str(arr2)]
+    res,rev = set(res),set(rev)
+    f = res.intersection(rev)
+    print(f)
+sorted_comm_by_digs(429,552)
