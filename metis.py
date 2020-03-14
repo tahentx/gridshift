@@ -194,4 +194,12 @@ def sorted_comm_by_digs(arr1,arr2):
     f = list(f)
     squared = list(map(lambda x: x**2, f))
     print(squared)
-sorted_comm_by_digs(429,542)
+# sorted_comm_by_digs(429,542)
+
+# kata: https://www.codewars.com/kata/573c84bf0addf9568d001299/train/python
+def yes_no(arr):
+    for x in arr:
+        if (arr.index(x) + 1) % 2 == 0:
+            arr.remove(x)
+    print(arr)
+yes_no(['Big','bad','wolf','on','the','way'])
