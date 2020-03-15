@@ -200,4 +200,10 @@ def sorted_comm_by_digs(arr1,arr2):
 def yes_no(arr):
     even = list(filter(lambda x: (arr.index(x)) % 2 == 0, arr))
     print(even)
-yes_no(['Big','bad','wolf','on','the','way'])
+# yes_no(['Big','bad','wolf','on','the','way'])
+
+# kata: https://www.codewars.com/kata/53da6a7e112bd15cbc000012/train/python
+def sort_dict(d):
+    s = {k: v for k, v in sorted(d.items(), key=lambda item: item[1])}
+    print(s)
+sort_dict({1: 2, 3: 4, 4: 3, 2: 1, 0: 0})
