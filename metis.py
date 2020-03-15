@@ -206,4 +206,17 @@ def yes_no(arr):
 def sort_dict(d):
     s = {k: v for k, v in sorted(d.items(), key=lambda item: item[1])}
     print(s)
-sort_dict({1: 2, 3: 4, 4: 3, 2: 1, 0: 0})
+# sort_dict({1: 2, 3: 4, 4: 3, 2: 1, 0: 0})
+
+# kata: https://www.codewars.com/kata/56b18992240660a97c00000a/train/python
+def permutation_average(n):
+    import itertools
+    n = [int(x) for x in str(n)]
+    perm = itertools.permutations(n)
+    x = [x for x in perm]
+    y = list(map(sum,x))
+    combined_tple = str(y[0]) + str(y[1])
+    scalar = int(combined_tple) / len(x)
+    return scalar
+
+permutation_average(25)
