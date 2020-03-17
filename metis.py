@@ -218,5 +218,29 @@ def permutation_average(n):
     combined_tple = str(y[0]) + str(y[1])
     scalar = int(combined_tple) / len(x)
     return scalar
+# permutation_average(25)
 
-permutation_average(25)
+# kata: https://www.codewars.com/kata/5676ffaa8da527f234000025/train/python
+# def sc_perm_comb(arr):
+#     import itertools
+#     arr = list(arr)
+#     all_com = itertools.combinations_with_replacement(arr,1)
+#     print(all_com)
+# sc_perm_comb(1543)
+
+# kata: https://www.codewars.com/kata/598ee7b6ec6cb90dd6000061/train/python
+# def count_repeats(txt):
+
+def mask(stng):
+    targets = []
+    for c,v in enumerate(stng):
+        if stng.count(v) > 1:
+            targets.append(c)
+    targets.pop(0)
+    for c,v in enumerate(stng):
+        if c in targets:
+            stng = stng.replace(v,'*')
+    print(stng)
+    
+                        
+mask("Tester")
