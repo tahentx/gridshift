@@ -243,4 +243,11 @@ def mask(stng):
     print(stng)
     
                         
-mask("Tester")
+# mask("Tester")
+
+def mix_up(a,b):
+    x, y = a[0:2], b[0:2]
+    a_body, b_body = a[2:], b[2:]
+    output = y + a_body + " " + x + b_body
+    return output
+mix_up("dogging","catters")
