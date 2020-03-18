@@ -316,6 +316,19 @@ def match_ends(s):
         if len(item) >= 2:
             if item[0] == item[-1]:
                 count += 1
-    print(count)
-match_ends(['aba','ddo','xyz','faf','hat','gag'])
+    return count
+# match_ends(['aba','ddo','xyz','faf','hat','gag'])
+
+def front_x(words):
+    exes = []
+    non = []
+    for word in words:
+        if word[0] == 'x':
+            exes.append(word)
+        else:
+            non.append(word)
+    print(exes)
+    print(non)
+front_x(['bra','yo','xray','xylophone','rent'])
+
     
