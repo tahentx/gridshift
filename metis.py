@@ -306,7 +306,16 @@ def front_back(s1,s2):
         evens.append(s2[cut:])
         master_template.append(evens)
     output = master_template[0][0] + master_template[1][0] + master_template[0][1] + master_template[1][1]
-    print(output)
+    return output
 
-front_back("abcde","xyz")
+# front_back("abcde","xyz")
+
+def match_ends(s):
+    count = 0
+    for item in s:
+        if len(item) >= 2:
+            if item[0] == item[-1]:
+                count += 1
+    print(count)
+match_ends(['aba','ddo','xyz','faf','hat','gag'])
     
