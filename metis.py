@@ -280,11 +280,28 @@ def not_bad(s):
 
 def front_back(s1,s2):
     import math
-    odd_container = []
-    middle_line =  math.ceil(len(s1) / 2) 
-    odd_container.append(s1[ : middle_line ])
-    odd_container.append(s1[ middle_line : ])
-    print(odd_container)
+    if len(s1) % 2 != 0:
+        odd_container = []
+        middle_line =  math.ceil(len(s1) / 2) 
+        odd_container.append(s1[ : middle_line ])
+        odd_container.append(s1[ middle_line : ])
+    elif len(s1) % 2 == 0:
+        even = []
+        half = int(len(s1) / 2)
+        even.append(s1[:half])
+        even.append(s1[half:])
+    if len(s2) % 2 != 0:
+        odd = []
+        mid_point = math.ceil(len(s2) / 2)
+        odd.append(s2[ : mid_point])
+        odd.append(s2[mid_point : ])
+    elif len(s2) % 2 == 0:
+        evens = []
+        cut = int(len(s2) / 2)
+        evens.append(s2[:cut])
+        evens.append(s2[cut:])
+    
+    
 
-front_back("Brass","Bands")
+front_back("Golfs","Band")
     
