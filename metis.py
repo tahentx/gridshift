@@ -250,4 +250,22 @@ def mix_up(a,b):
     a_body, b_body = a[2:], b[2:]
     output = y + a_body + " " + x + b_body
     return output
-mix_up("dogging","catters")
+# mix_up("dogging","catters")
+
+def verbing(s):
+    if len(s) >= 3 and s[-3:] != 'ing':
+        s = s + 'ing'
+        return s
+    elif s[-3:] == 'ing':
+        s = s + 'ly'
+        return s
+    elif len(s) < 3:
+        return s
+# verbing("swimming")
+
+def not_bad(s):
+    s = s.split()
+    for idx,val in enumerate(s):
+        print(idx,val)
+not_bad("Big is not bad")
+    
