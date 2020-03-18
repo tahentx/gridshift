@@ -339,8 +339,6 @@ def front_x(words):
 # sort_last([(1,3),(3,2),(2,1)])
 
 def remove_adjacent(nums):
-    for x,y in zip(nums[::],nums[1::]):
-        if x == y:
-            nums.pop(x)
-    return nums
+    a = [k for k, g in itertools.groupby(nums)]
+    print(a)
 remove_adjacent([1,2,2,3])
