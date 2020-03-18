@@ -347,3 +347,18 @@ def linear_merge(list1,list2):
     list3 = sorted(sorted(list1) + sorted(list2))
     return list3
 linear_merge(['aa','xx','zz'],['bb','cc'])
+
+import csv
+
+with open('football.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    data = []
+    for row in csv_reader:
+        data.append(row)
+    data.pop(0)
+    for team in data:
+        spread = abs((int(team[-2])) - (int(team[-3])))
+        team.append(spread)
+    
+    
