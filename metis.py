@@ -340,5 +340,10 @@ def front_x(words):
 
 def remove_adjacent(nums):
     a = [k for k, g in itertools.groupby(nums)]
-    print(a)
+    return a
 remove_adjacent([1,2,2,3])
+
+def linear_merge(list1,list2):
+    list3 = sorted(sorted(list1) + sorted(list2))
+    return list3
+linear_merge(['aa','xx','zz'],['bb','cc'])
