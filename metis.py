@@ -327,8 +327,10 @@ def front_x(words):
             exes.append(word)
         else:
             non.append(word)
-    print(exes)
-    print(non)
+    exes.sort()
+    non.sort()
+    output = exes + non
+    return output
 front_x(['bra','yo','xray','xylophone','rent'])
 
     
