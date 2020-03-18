@@ -331,6 +331,10 @@ def front_x(words):
     non.sort()
     output = exes + non
     return output
-front_x(['bra','yo','xray','xylophone','rent'])
+# front_x(['bra','yo','xray','xylophone','rent'])
 
+def sort_last(tuples):
+    foo = sorted(tuples, key=lambda x: x[-1]) 
+    print(foo)
+sort_last([(1,3),(3,2),(2,1)])
     
