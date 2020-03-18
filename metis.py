@@ -280,28 +280,33 @@ def not_bad(s):
 
 def front_back(s1,s2):
     import math
+    master_template = []
     if len(s1) % 2 != 0:
         odd_container = []
         middle_line =  math.ceil(len(s1) / 2) 
         odd_container.append(s1[ : middle_line ])
         odd_container.append(s1[ middle_line : ])
+        master_template.append(odd_container)
     elif len(s1) % 2 == 0:
         even = []
         half = int(len(s1) / 2)
         even.append(s1[:half])
         even.append(s1[half:])
+        master_template.append(even)
     if len(s2) % 2 != 0:
         odd = []
         mid_point = math.ceil(len(s2) / 2)
         odd.append(s2[ : mid_point])
         odd.append(s2[mid_point : ])
+        master_template.append(odd)
     elif len(s2) % 2 == 0:
         evens = []
         cut = int(len(s2) / 2)
         evens.append(s2[:cut])
         evens.append(s2[cut:])
-    
-    
+        master_template.append(evens)
+    output = master_template[0][0] + master_template[1][0] + master_template[0][1] + master_template[1][1]
+    print(output)
 
-front_back("Golfs","Band")
+front_back("abcde","xyz")
     
