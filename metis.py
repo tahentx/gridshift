@@ -276,5 +276,15 @@ def not_bad(s):
                     s = ' '.join(s)
                     return s
     
-not_bad("Big is not bad")
+# not_bad("Big is not bad")
+
+def front_back(s1,s2):
+    import math
+    odd_container = []
+    middle_line =  math.ceil(len(s1) / 2) 
+    odd_container.append(s1[ : middle_line ])
+    odd_container.append(s1[ middle_line : ])
+    print(odd_container)
+
+front_back("Brass","Bands")
     
