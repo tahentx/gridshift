@@ -333,8 +333,14 @@ def front_x(words):
     return output
 # front_x(['bra','yo','xray','xylophone','rent'])
 
-def sort_last(tuples):
-    foo = sorted(tuples, key=lambda x: x[-1]) 
-    print(foo)
-sort_last([(1,3),(3,2),(2,1)])
+# def sort_last(tuples):
+#     return sorted(tuples, key=lambda x: x[-1]) 
     
+# sort_last([(1,3),(3,2),(2,1)])
+
+def remove_adjacent(nums):
+    for x,y in zip(nums[::],nums[1::]):
+        if x == y:
+            nums.pop(x)
+    return nums
+remove_adjacent([1,2,2,3])
