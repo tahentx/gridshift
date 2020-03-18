@@ -265,12 +265,16 @@ def verbing(s):
 
 def not_bad(s):
     s = s.split()
-    for i,v in enumerate(s):
-        if v == 'not':
-            end = s[i:]
-            if 'bad' in end:
-                st = ' '.join(s)
-                new = st.replace('not bad','good')
-                return new
+    alpha = s.index('not')
+    omega = s.index('bad')
+    for word in s:
+        if 'not' in s:
+            if 'bad' in s:
+                if omega > alpha:
+                    del s[alpha:omega + 1]
+                    s.append('good')
+                    s = ' '.join(s)
+                    return s
+    
 not_bad("Big is not bad")
     
