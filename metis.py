@@ -350,19 +350,38 @@ linear_merge(['aa','xx','zz'],['bb','cc'])
 
 import csv
 
-with open('football.csv') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    line_count = 0
-    data = []
-    for row in csv_reader:
-        data.append(row)
-    data.pop(0)
-    spread_list = []
-    for team in data:
-        spread = abs((int(team[-2])) - (int(team[-3])))
-        team.append(spread)
-        spread_list.append(spread)
-    for entry in data:
-        for value in spread_list:
-            if entry[-1] == min(spread_list):
-                return data.index(entry)
+# with open('football.csv') as csv_file:
+#     csv_reader = csv.reader(csv_file, delimiter=',')
+#     line_count = 0
+#     data = []
+#     for row in csv_reader:
+#         data.append(row)
+#     data.pop(0)
+#     spread_list = []
+#     for team in data:
+#         spread = abs((int(team[-2])) - (int(team[-3])))
+#         team.append(spread)
+#         spread_list.append(spread)
+#     for entry in data:
+#         for value in spread_list:
+#             if entry[-1] == min(spread_list):
+#                 return data.index(entry)
+
+# from itertools import islice
+# def intersect_lists(l1,l2):
+#     x = set(l1)
+#     y = set(l2)
+#     z = x.intersection(y)
+#     print(z)
+# intersect_lists([1,2,3],[1,2])
+
+from collections import Counter
+def counting(s):
+    copy = s[::-1]
+    for char in copy:
+        if copy.count(char) > 1:
+            copy = copy.replace(char,'*', copy.count(char) - 1)
+    answer = copy[::-1]
+    return answer 
+counting('sausage')
+
