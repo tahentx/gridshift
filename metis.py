@@ -357,8 +357,12 @@ with open('football.csv') as csv_file:
     for row in csv_reader:
         data.append(row)
     data.pop(0)
+    spread_list = []
     for team in data:
         spread = abs((int(team[-2])) - (int(team[-3])))
         team.append(spread)
-    
-    
+        spread_list.append(spread)
+    for entry in data:
+        for value in spread_list:
+            if entry[-1] == min(spread_list):
+                return data.index(entry)
