@@ -383,5 +383,29 @@ def counting(s):
             copy = copy.replace(char,'*', copy.count(char) - 1)
     answer = copy[::-1]
     return answer 
-counting('sausage')
+# counting('sausage')
 
+import re
+def not_bad(s):
+    val = re.sub(r'(not\s\w*bad)','good',s)
+    print(val)
+# not_bad('This is not that bad')
+
+from collections import defaultdict
+# count = defaultdict(int)
+# inv = ['ABB','SMA','ABB','Solar Edge']
+# for unit in inv:
+#     count[unit] += 1
+# print(count)
+
+# count = defaultdict(int)
+# skills = ['Matrices','Docker','Matrices','Vectors','Seaborn']
+# for skill in skills:
+#     count[skill] += 1
+# print(count)
+
+count = defaultdict(int)
+codes = ['88B','88B','82354','KNA']
+for code in codes:
+    count[code] += 1
+print(count)
