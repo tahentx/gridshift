@@ -22,6 +22,6 @@ def paint(start,end):
     broke = [[int(x) for x in str(val)] for val in total]
     flat_list = [item for sublist in broke for item in sublist]
     c = Counter(flat_list)
-    return dict(c)
+    print(c.values())
 
 paint(99,160)
