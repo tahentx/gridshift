@@ -15,10 +15,13 @@ data = list(facReader)
 # values = [entry[1:] for entry in data]
 # faculty_names = dict(zip(name_split,values))
 # return faculty_names
-
+from collections import Counter
 def paint(start,end):
     jobs = range(start,end + 1)
     total = [job for job in jobs]
     broke = [[int(x) for x in str(val)] for val in total]
-    print(broke)
+    flat_list = [item for sublist in broke for item in sublist]
+    c = Counter(flat_list)
+    return dict(c)
+
 paint(99,160)
