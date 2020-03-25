@@ -21,7 +21,14 @@ def paint(start,end):
     total = [job for job in jobs]
     broke = [[int(x) for x in str(val)] for val in total]
     flat_list = [item for sublist in broke for item in sublist]
-    c = Counter(flat_list)
-    print(c.values())
+    return c.values()
 
-paint(99,160)
+# paint(99,160)
+
+def interval_insert(myl):
+    l = [list(entry) for entry in myl] 
+    flat = [item for sublist in l for item in sublist]
+    flat.sort()
+    bounds = range(min(flat),max(flat))
+    print(bounds)
+interval_insert([(1,3,5),(4,5,2)])
