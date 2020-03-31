@@ -31,4 +31,11 @@ def interval_insert(myl):
     flat.sort()
     bounds = range(min(flat),max(flat))
     print(bounds)
-interval_insert([(1,3,5),(4,5,2)])
+# interval_insert([(1,3,5),(4,5,2)])
+
+def calculate(s):
+    import re
+    operator = re.sub(r'\dminus\d','-',s)
+    print(operator)
+# calculate('1minus2minus3minus4')
+
