@@ -39,3 +39,19 @@ def calculate(s):
     print(operator)
 # calculate('1minus2minus3minus4')
 
+import random
+import time
+
+def guess_num(num):
+    numbers = list(range(1,101))
+    count = 1
+    while len(numbers) > 1:
+        half = len(numbers)// 2
+        if num > half:
+            numbers = numbers[half:]
+            count += 1
+        elif num < half:
+            numbers = numbers[:half]
+            count += 1
+    return count
+
