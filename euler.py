@@ -2,11 +2,11 @@
 def euler_one(num):
     factors = []
     count = 0
-    while count < 10:
-        if count % 3 == 0:
-            factors.append(num)
-            count += 1
-        else:
-            count += 1
-    print(factors)
+    for x in range(1,1000):
+        if x % 3 == 0:
+            factors.append(x)
+        elif x % 5 == 0:
+            factors.append(x)
+    total = sum(factors)
+    return total
 euler_one(1)
