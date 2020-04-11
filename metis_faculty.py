@@ -55,7 +55,16 @@ import time
 #             count += 1
 #     return count
 
-def slippin(word):
-    half = len(word) // 2
-    print(word[:half])
-slippin("breads")
+# def slippin(word):
+#     half = len(word) // 2
+#     print(word[:half])
+# slippin("breads")
+
+from math import sqrt
+def outlier_removal(sample,cutoff):
+    mean = (sum(sample)) / len(sample)
+    standard_devs = list(map(lambda x: (x - mean) ** 2, sample))
+    print(standard_devs)
+
+
+outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
