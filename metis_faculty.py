@@ -67,6 +67,10 @@ def outlier_removal(sample,cutoff):
     variance = sum(s) / len(s)
     standard_dev = sqrt(variance)
     boundary = standard_dev * cutoff
+    for value in sample:
+        if (abs(value) - mean) > (abs(boundary) - mean):
+            print(value)
+    # boundary = standard_dev * cutoff
     
 
-outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
+outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 99999, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
