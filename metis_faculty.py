@@ -63,8 +63,10 @@ import time
 from math import sqrt
 def outlier_removal(sample,cutoff):
     mean = (sum(sample)) / len(sample)
-    standard_devs = list(map(lambda x: (x - mean) ** 2, sample))
-    print(standard_devs)
-
+    s = list(map(lambda x: (x - mean) ** 2, sample))
+    variance = sum(s) / len(s)
+    standard_dev = sqrt(variance)
+    boundary = standard_dev * cutoff
+    
 
 outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
