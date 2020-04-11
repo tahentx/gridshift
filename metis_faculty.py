@@ -69,8 +69,16 @@ def outlier_removal(sample,cutoff):
     boundary = standard_dev * cutoff
     for value in sample:
         if (abs(value) - mean) > (abs(boundary) - mean):
-            print(value)
+            del value
+        else:
+            return (sum(sample)) / len(sample)
     # boundary = standard_dev * cutoff
     
+from functools import reduce
+def find_closest(l,j):
+    product = reduce((lambda x,j: x - j), l)
+    print(product)
 
-outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 99999, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
+find_closest([1, -1, -5, 2, 4, -2, 1],3)
+
+# outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 99999, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
