@@ -73,7 +73,9 @@ def outlier_removal(sample,cutoff):
     for x in sample:
         y = abs(x - (sum(sample)/len(sample)))
         if y > boundary:
-            return y 
+            sample.remove(x)
+        else:
+            pass
 
 
         
