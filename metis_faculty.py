@@ -62,23 +62,32 @@ import time
 
 from math import sqrt
 def outlier_removal(sample,cutoff):
+    # find sample standard deviation
     mean = (sum(sample)) / len(sample)
-    s = list(map(lambda x: (x - mean) ** 2, sample))
-    variance = sum(s) / len(s)
-    standard_dev = sqrt(variance)
+    sq = list(map(lambda x: (x - mean) ** 2, sample))
+    sigma = sum(sq) / len(sq)
+    standard_dev = sqrt(sigma)
+    # calculate boundary using cutoff value
     boundary = standard_dev * cutoff
-    for value in sample:
-        if (abs(value) - mean) > (abs(boundary) - mean):
-            del value
-        else:
-            return (sum(sample)) / len(sample)
-    # boundary = standard_dev * cutoff
+    print(boundary)
+    for x in sample:
+        y = abs(x - (sum(sample)/len(sample)))
+        if y > boundary:
+            return y 
+
+
+        
     
+outlier_removal([9, 2, 5, 4, 120, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],2)
+
+
+
+
 from functools import reduce
 def find_closest(l,j):
     product = reduce((lambda x,j: x - j), l)
     print(product)
 
-find_closest([1, -1, -5, 2, 4, -2, 1],3)
+# find_closest([1, -1, -5, 2, 4, -2, 1],3)
 
-# outlier_removal([9, 2, 5, 4, 12, 7, 8, 11, 9, 99999, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],5)
+
