@@ -22,5 +22,18 @@ def Fibonacci(n):
         return Fibonacci(n-1)+Fibonacci(n-2) 
   
 # Driver Program 
-print(Fibonacci(9)) 
+# print(Fibonacci(9)) 
+
+def moving_average(a, n=3) :
+    ret = np.cumsum(a, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n
+t =  [4, 4, 4, 9, 10, 11, 12]
+# moving_average(t)
+
+nums = list(range(1,101))
+sum_sq = sum(list(map(lambda x: x ** 2, nums)))
+sq_sum = sum(nums) ** 2
+answer = sq_sum - sum_sq
+print(answer)
   
