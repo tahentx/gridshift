@@ -31,9 +31,19 @@ def moving_average(a, n=3) :
 t =  [4, 4, 4, 9, 10, 11, 12]
 # moving_average(t)
 
-nums = list(range(1,101))
-sum_sq = sum(list(map(lambda x: x ** 2, nums)))
-sq_sum = sum(nums) ** 2
-answer = sq_sum - sum_sq
-print(answer)
+# nums = list(range(1,101))
+# sum_sq = sum(list(map(lambda x: x ** 2, nums)))
+# sq_sum = sum(nums) ** 2
+# answer = sq_sum - sum_sq
+# print(answer)
   
+def largest(a, b):
+    candidates = []
+    while a > 0:
+        product = a * b
+        candidates.append(product)
+        a = a - 1
+        b = b - 1
+    print(candidates)
+
+largest(3,3)
