@@ -94,16 +94,22 @@ def find_closest(l,j):
 
 import string
 
-def OneEditAway(s):
-    alpha = list(string.ascii_lowercase)
-    for a in alpha:
-        print(a)
+def OneEditAway(s1,s2):
+    s1 = set(s1)
+    s2 = set(s2)
+    if len(s1) + 1 == len(s2):
+        return True
+    elif len(s1) - 1 == len(s2):
+        return True
+    elif len(list(s1 - s2)) == 2:
+        return True
+    else:
+        return False
+assert OneEditAway('pea', 'peas') == True
 
-OneEditAway("bos")
-# assert OneEditAway('pea', 'peas') = True
+assert OneEditAway('pea', 'fleas') == False
 
-# assert OneEditAway('pea', 'fleas') = False
+assert OneEditAway('pea', 'lea') == True
 
-# assert OneEditAway('pea', 'lea') = True
-
-# assert OneEditAway('pea', 'seas') = False
+assert OneEditAway('pea', 'seas') == False
+OneEditAway("bos","sgadg")
