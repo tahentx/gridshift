@@ -80,7 +80,7 @@ def outlier_removal(sample,cutoff):
 
         
     
-outlier_removal([9, 2, 5, 4, 120, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],2)
+# outlier_removal([9, 2, 5, 4, 120, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4],2)
 
 
 
@@ -92,4 +92,18 @@ def find_closest(l,j):
 
 # find_closest([1, -1, -5, 2, 4, -2, 1],3)
 
+import string
 
+def OneEditAway(s):
+    alpha = list(string.ascii_lowercase)
+    for a in alpha:
+        print(a)
+
+OneEditAway("bos")
+# assert OneEditAway('pea', 'peas') = True
+
+# assert OneEditAway('pea', 'fleas') = False
+
+# assert OneEditAway('pea', 'lea') = True
+
+# assert OneEditAway('pea', 'seas') = False
