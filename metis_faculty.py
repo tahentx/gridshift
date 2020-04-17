@@ -92,16 +92,19 @@ def find_closest(l,j):
 
 # find_closest([1, -1, -5, 2, 4, -2, 1],3)
 
-import string
 
+import functools
 def OneEditAway(s1,s2):
-    s1 = set(s1)
-    s2 = set(s2)
+    # compare the two lists to see if there is just one letter different
+    res = [x for x in s1 + s2 if x not in s1 or x not in s2]
+    if len(res) == 2:
+        return True 
+    # compare the two to see if there is one additional letter, or one less
+    s1 = list(s1)
+    s2 = list(s2)
     if len(s1) + 1 == len(s2):
         return True
     elif len(s1) - 1 == len(s2):
-        return True
-    elif len(list(s1 - s2)) == 2:
         return True
     else:
         return False
@@ -112,4 +115,4 @@ assert OneEditAway('pea', 'fleas') == False
 assert OneEditAway('pea', 'lea') == True
 
 assert OneEditAway('pea', 'seas') == False
-OneEditAway("bos","sgadg")
+OneEditAway("pea","lea")
