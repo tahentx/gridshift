@@ -108,11 +108,17 @@ def OneEditAway(s1,s2):
         return True
     else:
         return False
-assert OneEditAway('pea', 'peas') == True
+# assert OneEditAway('pea', 'peas') == True
 
-assert OneEditAway('pea', 'fleas') == False
+# assert OneEditAway('pea', 'fleas') == False
 
-assert OneEditAway('pea', 'lea') == True
+# assert OneEditAway('pea', 'lea') == True
 
-assert OneEditAway('pea', 'seas') == False
-OneEditAway("pea","lea")
+# assert OneEditAway('pea', 'seas') == False
+# OneEditAway("pea","lea")
+
+def max_profit(prices):
+    goal = min(prices) - max(prices)
+    print(goal)
+
+max_profit([3,10,8,4])
