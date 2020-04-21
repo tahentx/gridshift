@@ -118,7 +118,8 @@ def OneEditAway(s1,s2):
 # OneEditAway("pea","lea")
 
 def max_profit(prices):
-    goal = min(prices) - max(prices)
-    print(goal)
+    possible_trades = []
+    possible_trades.append(max(prices) - min(prices))
+    print(possible_trades)    
 
 max_profit([3,10,8,4])
