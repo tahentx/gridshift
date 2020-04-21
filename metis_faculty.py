@@ -117,9 +117,12 @@ def OneEditAway(s1,s2):
 # assert OneEditAway('pea', 'seas') == False
 # OneEditAway("pea","lea")
 
-def max_profit(prices):
-    possible_trades = []
-    possible_trades.append(max(prices) - min(prices))
-    print(possible_trades)    
+# https://www.codewars.com/kata/529e2e1f16cb0fcccb000a6b/train/python
 
-max_profit([3,10,8,4])
+def split_integer(num,parts):
+    assert isinstance(num,int)
+    assert isinstance(parts,int)
+    base = num / parts
+    print(base)
+
+split_integer(20,6)
