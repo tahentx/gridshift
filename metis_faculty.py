@@ -122,7 +122,17 @@ def OneEditAway(s1,s2):
 def split_integer(num,parts):
     assert isinstance(num,int)
     assert isinstance(parts,int)
-    base = num / parts
-    print(base)
+    x = (num/parts) * parts
+    print(x)
+    
+    # group = list(base * len(parts))
+    # if thresh < num:
+    #     diff = num - thresh
+    #     while diff > 0:
+            
+    # elif thresh > num:
+    #     print("above")
+    # else:
+    #     return base
 
 split_integer(20,6)
