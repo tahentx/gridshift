@@ -119,11 +119,11 @@ def OneEditAway(s1,s2):
 
 # https://www.codewars.com/kata/529e2e1f16cb0fcccb000a6b/train/python
 
-def split_integer(num,parts):
-    assert isinstance(num,int)
-    assert isinstance(parts,int)
-    x = (num/parts) * parts
-    print(x)
+# def split_integer(num,parts):
+#     assert isinstance(num,int)
+#     assert isinstance(parts,int)
+#     x = (num/parts) * parts
+#     print(x)
     
     # group = list(base * len(parts))
     # if thresh < num:
@@ -135,4 +135,22 @@ def split_integer(num,parts):
     # else:
     #     return base
 
-split_integer(20,6)
+# split_integer(20,6)
+from collections import namedtuple
+def disperse_change(cost, paid):
+    Denomination = namedtuple('Denomination', 'name value')
+    denominations = [
+        Denomination("Twenties", 20.00),
+        Denomination("Tens", 10.00),
+        Denomination("Fives", 5.00),
+        Denomination("Ones", 1.00),
+        Denomination("Quarters", 0.25),
+        Denomination("Dimes", 0.10),
+        Denomination("Nickles", 0.05),
+        Denomination("Pennies", 0.01)
+    ]
+
+    change = round(paid-cost,2)
+    print(f'Change due: {change}')
+
+disperse_change(23.38, 25)
