@@ -153,4 +153,14 @@ def disperse_change(cost, paid):
     change = round(paid-cost,2)
     print(f'Change due: {change}')
 
-disperse_change(23.38, 25)
+# disperse_change(23.38, 25)
+from itertools import combinations
+def ways(cents):
+    coins = [1,5]
+    combos = []
+    for coin in coins:
+        combos.append(coin)
+        if sum(combos) == cents:
+            break
+    print(combos)
+ways(55)
