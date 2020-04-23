@@ -163,4 +163,10 @@ def ways(cents):
         if sum(combos) == cents:
             break
     print(combos)
-ways(55)
+# ways(55)
+
+def group_cities(seq):
+    for s in seq:
+        s = set(s.lower())
+
+group_cities(['Tokyo', 'London', 'Rome', 'Donlon', 'Kyoto', 'Paris', 'Okyot'])
