@@ -154,7 +154,6 @@ def disperse_change(cost, paid):
     print(f'Change due: {change}')
 
 # disperse_change(23.38, 25)
-from itertools import combinations
 def ways(cents):
     coins = [1,5]
     combos = []
@@ -165,8 +164,14 @@ def ways(cents):
     print(combos)
 # ways(55)
 
+from itertools import combinations
 def group_cities(seq):
     for s in seq:
+        matches = []
         s = set(s.lower())
+        for a,b in combinations(seq,2):
+            if set(a.lower()) == set(b.lower()):
+                matches.append(a)
+    return set(matches)
 
 group_cities(['Tokyo', 'London', 'Rome', 'Donlon', 'Kyoto', 'Paris', 'Okyot'])
