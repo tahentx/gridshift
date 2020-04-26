@@ -164,14 +164,23 @@ def ways(cents):
     print(combos)
 # ways(55)
 
-from itertools import combinations
-def group_cities(seq):
-    for s in seq:
-        matches = []
-        s = set(s.lower())
-        for a,b in combinations(seq,2):
-            if set(a.lower()) == set(b.lower()):
-                matches.append(a)
-    return set(matches)
+# from itertools import combinations
+# def group_cities(seq):
+#     for s in seq:
+#         matches = []
+#         s = set(s.lower())
+#         for a,b in combinations(seq,2):
+#             if set(a.lower()) == set(b.lower()):
+#                 matches.append(a)
+#     return set(matches)
 
-group_cities(['Tokyo', 'London', 'Rome', 'Donlon', 'Kyoto', 'Paris', 'Okyot'])
+# group_cities(['Tokyo', 'London', 'Rome', 'Donlon', 'Kyoto', 'Paris', 'Okyot'])
+
+import numpy as np
+def bootstrap(data):
+    sample = np.random.rand(100)
+    sub_sample = np.random.choice(sample,5,replace=True)
+    print(sub_sample)
+        
+
+bootstrap('33')
