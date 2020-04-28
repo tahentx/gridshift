@@ -192,3 +192,11 @@ def find_vowels(characters):
             if c == v:
                 print(c)
 find_vowels('cars')
+
+def sort_numbers_and_letters(string):
+    
+    for s in list(string):
+            print("number")
+        else:
+            print("not a number")
+sort_numbers_and_letters("5sg3h3hhh")
