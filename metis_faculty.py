@@ -181,6 +181,6 @@ def bootstrap(data):
     sample = np.random.rand(100)
     sub_sample = np.random.choice(sample,5,replace=True)
     print(sub_sample)
-        
+    
 
 bootstrap('33')
