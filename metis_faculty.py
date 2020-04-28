@@ -183,4 +183,12 @@ def bootstrap(data):
     print(sub_sample)
     
 
-bootstrap('33')
+# bootstrap('33')
+
+def find_vowels(characters):
+    vowels = ['a','e','i','o','u']
+    for c in characters.lower():
+        for v in vowels:
+            if c == v:
+                print(c)
+find_vowels('cars')
