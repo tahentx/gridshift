@@ -1,5 +1,5 @@
 FROM scratch
 COPY . /hello.py
 EXPOSE 80
-RUN /hello.py
+RUN make /hello.py
 CMD python hello.py
