@@ -46,4 +46,15 @@ def largest(a, b):
         b = b - 1
     print(candidates)
 
-largest(3,3)
+# largest(3,3)
+
+import numpy as np
+
+def num_demo(n, v = np.random.rand(5,1)):
+    arr = np.arange(n)
+    new_arr = np.reshape(arr,(5,5))
+    val = np.dot(new_arr,v)
+    print(val)
+    
+
+num_demo(25)
