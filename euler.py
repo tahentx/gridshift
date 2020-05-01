@@ -57,4 +57,11 @@ def num_demo(n, v = np.random.rand(5,1)):
     print(val)
     
 
-num_demo(25)
+# num_demo(25)
+from itertools import accumulate 
+import random
+def find_largest_prod(data):
+    prod = list(accumulate(data,func=operator.mul))
+    print(prod)
+
+find_largest_prod(random.randrange(10))
