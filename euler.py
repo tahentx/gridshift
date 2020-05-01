@@ -56,6 +56,15 @@ def num_demo(n, v = np.random.rand(5,1)):
     val = np.dot(new_arr,v)
     print(val)
     
-
 # num_demo(25)
 
+def create_imat(num):
+    counter = 0
+    dim = (num,num)
+    base = np.zeros(dim)
+    for x in base:
+        x[counter] = 1
+        counter += 1
+    print(base)
+
+create_imat(5)
