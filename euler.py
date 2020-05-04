@@ -67,4 +67,12 @@ def create_imat(num):
         counter += 1
     print(base)
 
-create_imat(5)
+# create_imat(5)
+
+def create_matrix(size):
+    a = np.random.randint(low=1, high=100, size=size * 4) 
+    b = np.reshape(a,(size,size))
+    return b
+create_matrix(4)
+
+
