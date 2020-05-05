@@ -73,6 +73,14 @@ def create_matrix(size):
     a = np.random.randint(low=1, high=100, size=size * 4) 
     b = np.reshape(a,(size,size))
     return b
-create_matrix(4)
+# create_matrix(4)
+
+def sum_large_num(file):
+    f = open(file, "r")
+    data = (f.read())
+    parsed_data = [int(x) for x in data.split()]
+    total = np.sum(parsed_data)
+    return total
+sum_large_num("large.txt")
 
 
