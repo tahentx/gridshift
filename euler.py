@@ -81,6 +81,15 @@ def sum_large_num(file):
     parsed_data = [int(x) for x in data.split()]
     total = np.sum(parsed_data)
     return total
-sum_large_num("large.txt")
+# sum_large_num("large.txt")
+
+import logging
+def example_log(filename):
+    logging.basicConfig(filename=filename,level=logging.DEBUG)
+    logging.debug('This message should go to the log file')
+    logging.info('So should this')
+    logging.warning('And this, too')
+example_log('example.log')
+
 
 
